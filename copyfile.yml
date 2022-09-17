@@ -1,0 +1,9 @@
+---
+- hosts: webserver
+  become: false
+  become_user: ansibleadmin
+  tasks: 
+    - name: copy the war to tomcat
+      copy:
+        src: /home/ansibleadmin/playbooks/webapp/target/webapp.war
+        dest: /opt/apache-tomcat-8.5.82/webapps

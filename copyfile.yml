@@ -1,5 +1,5 @@
 ---
-- hosts: webserver
+- hosts: web
   become: false
   become_user: ansibleadmin
   tasks: 
